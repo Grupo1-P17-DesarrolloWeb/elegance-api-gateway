@@ -46,6 +46,18 @@ async inventoryById(id) {
     return await this.get(`/inventory/${id}`);
 }
 
+async inventoryByAvailable(is_available) {
+    return await this.get(`/inventory/byAvailable/${is_available}`);
+}
+
+async inventoryByColor(color) {
+    return await this.get(`/inventory/byColor/${color}`);
+}
+
+async inventoryByPrice(price) {
+    return await this.get(`/inventory/byPrice/${price}`);
+}
+
 async updateInventory(inventory) {
     inventory = new Object(JSON.parse(JSON.stringify(inventory)));
     return await this.put(`/inventory/update/${inventory.id}`, inventory);
