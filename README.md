@@ -8,4 +8,4 @@ Running
 node src/index.js
 
 Deployment en Heroku:
-https://apigatewaytheelegance.herokuapp.com/
+https://theelegance-apigateway.herokuapp.com/
