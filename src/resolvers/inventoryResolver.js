@@ -3,6 +3,16 @@ const inventoryResolver = {
         inventoryById: async(_, {id},{dataSources})=>{
              return await dataSources.authAPI.inventoryById(id);
 
+        },
+        inventoryByAvailable: async(_, {is_available},{dataSources})=>{
+            return await dataSources.authAPI.inventoryByAvailable(is_available);
+
+        },
+        inventoryByColor: async(_, {color},{dataSources})=>{
+            return await dataSources.authAPI.inventoryByColor(color);
+        },
+        inventoryByPrice: async(_, {price},{dataSources})=>{
+            return await dataSources.authAPI.inventoryByPrice(price);
         }
     },
     Mutation: {

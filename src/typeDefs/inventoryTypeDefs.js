@@ -30,6 +30,9 @@ input inventoryUpdate{
 
 type Query {
     inventoryById(id: Int!): Inventory!
+    inventoryByAvailable(is_available: Boolean!): [Inventory]
+    inventoryByColor(color: String!): [Inventory]
+    inventoryByPrice(price: Int!): [Inventory]
 }
 type Mutation {
     createInventory(inventory  :inventoryInput!)  : Inventory
